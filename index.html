@@ -32,12 +32,27 @@ nav a {
 color: white;
 text-decoration: none;
 margin-left: 15px;
+transition: 0.3s;
 }
 
-/* SECTION */
+nav a:hover {
+color: #00c6ff;
+}
+
+/* SECTION ANIMATION */
 section {
 padding: 80px 20px;
 text-align: center;
+opacity: 0;
+transform: translateY(40px);
+animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 /* HERO */
@@ -53,9 +68,11 @@ height: 130px;
 border-radius: 50%;
 object-fit: cover;
 border: 3px solid #00c6ff;
+box-shadow: 0 0 15px #00c6ff;
 margin-bottom: 15px;
 }
 
+/* RESUME BUTTON */
 .resume-btn {
 margin-top: 15px;
 padding: 10px 20px;
@@ -64,6 +81,12 @@ border: none;
 border-radius: 5px;
 color: white;
 cursor: pointer;
+transition: 0.3s;
+}
+
+.resume-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px #00c6ff;
 }
 
 /* SKILLS */
@@ -107,7 +130,8 @@ padding: 15px;
 }
 
 .card:hover {
-transform: translateY(-10px) scale(1.03);
+transform: translateY(-10px) scale(1.05);
+box-shadow: 0 0 20px rgba(0,198,255,0.6);
 }
 
 /* PROJECT BUTTON */
@@ -120,10 +144,12 @@ color: white;
 border-radius: 5px;
 text-decoration: none;
 font-size: 14px;
+transition: 0.3s;
 }
 
 .btn:hover {
-transform: scale(1.05);
+transform: scale(1.1);
+box-shadow: 0 0 15px #00c6ff;
 }
 
 /* FORM */
