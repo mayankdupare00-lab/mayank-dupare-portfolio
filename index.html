@@ -38,22 +38,26 @@ margin-left: 15px;
 section {
 padding: 80px 20px;
 text-align: center;
-opacity: 0;
-transform: translateY(50px);
-animation: fadeIn 1s ease forwards;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-to {
-opacity: 1;
-transform: translateY(0);
-}
 }
 
 /* HERO */
-.hero button {
-margin-top: 20px;
+.hero {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.profile {
+width: 130px;
+height: 130px;
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid #00c6ff;
+margin-bottom: 15px;
+}
+
+.resume-btn {
+margin-top: 15px;
 padding: 10px 20px;
 background: linear-gradient(45deg, #00c6ff, #0072ff);
 border: none;
@@ -84,12 +88,6 @@ gap: 20px;
 flex-wrap: wrap;
 }
 
-/* REMOVE LINK STYLE */
-.projects a {
-text-decoration: none;
-color: inherit;
-}
-
 .card {
 width: 250px;
 background: rgba(255,255,255,0.05);
@@ -112,6 +110,22 @@ padding: 15px;
 transform: translateY(-10px) scale(1.03);
 }
 
+/* PROJECT BUTTON */
+.btn {
+display: inline-block;
+margin-top: 10px;
+padding: 8px 15px;
+background: linear-gradient(45deg, #00c6ff, #0072ff);
+color: white;
+border-radius: 5px;
+text-decoration: none;
+font-size: 14px;
+}
+
+.btn:hover {
+transform: scale(1.05);
+}
+
 /* FORM */
 form {
 padding: 20px;
@@ -127,17 +141,6 @@ padding: 10px;
 margin: 8px 0;
 border-radius: 5px;
 border: none;
-}
-
-/* BUTTON */
-button {
-width: 100%;
-padding: 10px;
-background: linear-gradient(45deg, #00c6ff, #0072ff);
-border: none;
-border-radius: 5px;
-color: white;
-cursor: pointer;
 }
 
 /* FOOTER */
@@ -185,7 +188,7 @@ width: 90%;
 
 <!-- NAVBAR -->
 <nav>
-<div><b>Mayank Dupare</b></div>
+<div><b>Mayank</b></div>
 <div>
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -196,11 +199,16 @@ width: 90%;
 
 <!-- HERO -->
 <section id="home" class="hero">
-<h1>Hi, I'm Mayank Dupare 👋</h1>
+
+<img src="image/profile.jpg" class="profile">
+
+<h1>Hi, I'm Mayank 👋</h1>
 <p>Aspiring UI Designer</p>
-<a href="resume/Mayank Dupare_Resume.pdf" download>
-<button>Download Resume</button>
+
+<a href="resume/Mayank_Resume.pdf" download>
+<button class="resume-btn">Download Resume</button>
 </a>
+
 </section>
 
 <!-- ABOUT -->
@@ -235,45 +243,41 @@ width: 90%;
 
 <div class="projects">
 
-<a href="#" target="_blank">
 <div class="card">
 <img src="image/project1.jpg">
 <div class="card-content">
-<h3>Portfolio</h3>
-<p>My personal website</p>
+<h3>Portfolio Website</h3>
+<p>My personal portfolio</p>
+<a href="#" target="_blank" class="btn">View Project</a>
 </div>
 </div>
-</a>
 
-<a href="#" target="_blank">
 <div class="card">
 <img src="image/project2.jpg">
 <div class="card-content">
 <h3>Login UI</h3>
 <p>Modern login design</p>
+<a href="#" target="_blank" class="btn">View Project</a>
 </div>
 </div>
-</a>
 
-<a href="#" target="_blank">
 <div class="card">
 <img src="image/project3.jpg">
 <div class="card-content">
 <h3>Contact Form</h3>
-<p>Interactive form</p>
+<p>Interactive form design</p>
+<a href="#" target="_blank" class="btn">View Project</a>
 </div>
 </div>
-</a>
 
-<a href="#" target="_blank">
 <div class="card">
 <img src="image/project4.jpg">
 <div class="card-content">
-<h3>New Project</h3>
-<p>Description of your project</p>
+<h3>Landing Page</h3>
+<p>Modern landing UI</p>
+<a href="#" target="_blank" class="btn">View Project</a>
 </div>
 </div>
-</a>
 
 </div>
 
@@ -292,7 +296,7 @@ width: 90%;
 </section>
 
 <footer>
-<p>© 2026 Mayank Dupare</p>
+<p>© 2026 Mayank</p>
 </footer>
 
 </body>
