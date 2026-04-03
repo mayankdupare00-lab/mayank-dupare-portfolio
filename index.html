@@ -22,12 +22,18 @@ position: sticky;
 top: 0;
 background: rgba(255,255,255,0.05);
 backdrop-filter: blur(10px);
+z-index: 1000;
 }
 
 nav a {
 color: white;
 text-decoration: none;
-margin-left: 15px;
+margin-left: 20px;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #00c6ff;
 }
 
 /* HERO */
@@ -42,6 +48,7 @@ height: 140px;
 border-radius: 50%;
 border: 3px solid #00c6ff;
 box-shadow: 0 0 25px #00c6ff;
+margin-bottom: 20px;
 }
 
 h1 {
@@ -53,6 +60,7 @@ color: transparent;
 
 /* BUTTON */
 .resume-btn, .btn {
+display: inline-block;
 padding: 10px 20px;
 background: linear-gradient(45deg, #00c6ff, #0072ff);
 border: none;
@@ -61,6 +69,7 @@ color: white;
 cursor: pointer;
 margin-top: 10px;
 transition: 0.3s;
+text-decoration: none;
 }
 
 .resume-btn:hover, .btn:hover {
@@ -130,6 +139,7 @@ border: none;
 border-radius: 5px;
 }
 
+/* FOOTER */
 footer {
 text-align: center;
 padding: 20px;
@@ -141,6 +151,7 @@ padding: 20px;
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
 <div><b>Mayank</b></div>
 <div>
@@ -151,64 +162,67 @@ padding: 20px;
 </div>
 </nav>
 
+<!-- HERO -->
 <section id="home" class="hero">
 
-<img src="image/profile.jpg" class="profile">
+<img src="images/profile.jpg" class="profile">
 
 <h1>Hi, I'm Mayank 👋</h1>
 <p>I design modern UI interfaces</p>
 
-<a href="resume/Mayank_Resume.pdf" download>
-<button class="resume-btn">Download Resume</button>
+<a href="resume/Mayank_Resume.pdf" download class="resume-btn">
+Download Resume
 </a>
 
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>I create modern and user-friendly designs.</p>
+<p>I create modern and user-friendly UI designs.</p>
 </section>
 
+<!-- SKILLS -->
 <section>
 <h2>My Skills</h2>
 <p>HTML | CSS | UI Design | Figma</p>
 </section>
 
-<!-- ✅ FIXED PROJECT SECTION (4 CARDS) -->
+<!-- PROJECTS -->
 <section id="projects">
 <h2>My Projects</h2>
 
 <div class="projects">
 
 <div class="card">
-<img src="image/project1.jpg">
+<img src="images/project1.jpg">
 <div class="card-content">
 <h3>Portfolio Website</h3>
-<a href="#" class="btn">View</a>
+<a href="project1.html" class="btn">View</a>
 </div>
 </div>
 
 <div class="card">
-<img src="image/project2.jpg">
+<img src="images/project2.jpg">
 <div class="card-content">
 <h3>Login UI</h3>
-<a href="#" class="btn">View</a>
+<a href="project2.html" class="btn">View</a>
 </div>
 </div>
 
 <div class="card">
-<img src="image/project3.jpg">
+<img src="images/project3.jpg">
 <div class="card-content">
 <h3>Contact Form</h3>
-<a href="#" class="btn">View</a>
+<a href="project3.html" class="btn">View</a>
 </div>
 </div>
 
 <div class="card">
-<img src="image/project4.jpg">
+<img src="images/project4.jpg">
 <div class="card-content">
 <h3>Landing Page</h3>
-<a href="#" class="btn">View</a>
+<a href="project4.html" class="btn">View</a>
 </div>
 </div>
 
@@ -216,6 +230,7 @@ padding: 20px;
 
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 
@@ -227,13 +242,14 @@ padding: 20px;
 
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Mayank</p>
 </footer>
 
+<!-- JS ANIMATION -->
 <script>
 
-// SCROLL ANIMATION
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
