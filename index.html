@@ -6,7 +6,6 @@
 
 <style>
 
-/* GOOGLE FONT STYLE FEEL */
 body {
 margin: 0;
 font-family: 'Segoe UI', sans-serif;
@@ -29,38 +28,22 @@ nav a {
 color: white;
 text-decoration: none;
 margin-left: 15px;
-transition: 0.3s;
-}
-
-nav a:hover {
-color: #00c6ff;
-}
-
-/* SECTION */
-section {
-padding: 100px 20px;
-text-align: center;
 }
 
 /* HERO */
 .hero {
-display: flex;
-flex-direction: column;
-align-items: center;
+text-align: center;
+padding: 100px 20px;
 }
 
-/* PROFILE IMAGE */
 .profile {
 width: 140px;
 height: 140px;
 border-radius: 50%;
-object-fit: cover;
 border: 3px solid #00c6ff;
 box-shadow: 0 0 25px #00c6ff;
-margin-bottom: 20px;
 }
 
-/* GRADIENT TEXT */
 h1 {
 font-size: 40px;
 background: linear-gradient(45deg, #00c6ff, #0072ff);
@@ -68,35 +51,48 @@ background: linear-gradient(45deg, #00c6ff, #0072ff);
 color: transparent;
 }
 
-/* HERO TEXT */
-.hero p {
-font-size: 18px;
-opacity: 0.8;
-}
-
-/* RESUME BUTTON */
-.resume-btn {
-margin-top: 20px;
-padding: 12px 25px;
+/* BUTTON */
+.resume-btn, .btn {
+padding: 10px 20px;
 background: linear-gradient(45deg, #00c6ff, #0072ff);
 border: none;
-border-radius: 30px;
+border-radius: 20px;
 color: white;
 cursor: pointer;
+margin-top: 10px;
 transition: 0.3s;
-font-size: 16px;
 }
 
-.resume-btn:hover {
+.resume-btn:hover, .btn:hover {
 transform: scale(1.1);
 box-shadow: 0 0 20px #00c6ff;
 }
 
-/* GLASS CARD */
+/* SECTIONS */
+section {
+padding: 80px 20px;
+text-align: center;
+opacity: 0;
+transform: translateY(50px);
+transition: 1s;
+}
+
+section.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* PROJECTS */
+.projects {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
 .card {
 width: 260px;
 background: rgba(255,255,255,0.08);
-backdrop-filter: blur(15px);
 border-radius: 15px;
 overflow: hidden;
 transition: 0.3s;
@@ -108,78 +104,35 @@ height: 150px;
 object-fit: cover;
 }
 
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 0 20px #00c6ff;
+}
+
 .card-content {
 padding: 15px;
 }
 
-.card:hover {
-transform: translateY(-10px) scale(1.05);
-box-shadow: 0 0 25px rgba(0,198,255,0.6);
-}
-
-/* PROJECTS */
-.projects {
-display: flex;
-justify-content: center;
-gap: 25px;
-flex-wrap: wrap;
-}
-
-/* BUTTON */
-.btn {
-display: inline-block;
-margin-top: 10px;
-padding: 10px 18px;
-background: linear-gradient(45deg, #00c6ff, #0072ff);
-color: white;
-border-radius: 20px;
-text-decoration: none;
-font-size: 14px;
-transition: 0.3s;
-}
-
-.btn:hover {
-transform: scale(1.1);
-box-shadow: 0 0 20px #00c6ff;
-}
-
-/* SKILLS */
-.skills {
-display: flex;
-justify-content: center;
-gap: 15px;
-flex-wrap: wrap;
-}
-
-.skill {
-background: rgba(255,255,255,0.1);
-padding: 10px 20px;
-border-radius: 30px;
-}
-
 /* FORM */
 form {
-padding: 25px;
-width: 320px;
-margin: auto;
 background: rgba(255,255,255,0.08);
-backdrop-filter: blur(15px);
+padding: 20px;
+width: 300px;
+margin: auto;
 border-radius: 15px;
 }
 
 input {
 width: 100%;
-padding: 12px;
+padding: 10px;
 margin: 10px 0;
-border-radius: 8px;
 border: none;
+border-radius: 5px;
 }
 
-/* FOOTER */
 footer {
 text-align: center;
 padding: 20px;
-opacity: 0.6;
 }
 
 </style>
@@ -203,31 +156,22 @@ opacity: 0.6;
 <img src="image/profile.jpg" class="profile">
 
 <h1>Hi, I'm Mayank 👋</h1>
-<p>I design modern, clean and user-friendly interfaces.</p>
+<p>I design modern UI interfaces</p>
 
 <a href="resume/Mayank_Resume.pdf" download>
 <button class="resume-btn">Download Resume</button>
 </a>
 
-<p style="opacity:0.6;">Available for freelance projects</p>
-
 </section>
 
 <section id="about">
 <h2>About Me</h2>
-<p>I create visually appealing and user-focused designs.</p>
+<p>I create modern and user-friendly designs.</p>
 </section>
 
 <section>
 <h2>My Skills</h2>
-
-<div class="skills">
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">UI Design</div>
-<div class="skill">Figma</div>
-</div>
-
+<p>HTML | CSS | UI Design | Figma</p>
 </section>
 
 <section id="projects">
@@ -238,36 +182,16 @@ opacity: 0.6;
 <div class="card">
 <img src="image/project1.jpg">
 <div class="card-content">
-<h3>Portfolio Website</h3>
-<p>Personal portfolio design</p>
-<a href="#" class="btn">View Project</a>
+<h3>Portfolio</h3>
+<a href="#" class="btn">View</a>
 </div>
 </div>
 
 <div class="card">
 <img src="image/project2.jpg">
 <div class="card-content">
-<h3>Login UI Design</h3>
-<p>Modern login interface</p>
-<a href="#" class="btn">View Project</a>
-</div>
-</div>
-
-<div class="card">
-<img src="image/project3.jpg">
-<div class="card-content">
-<h3>Contact Form UI</h3>
-<p>Interactive form layout</p>
-<a href="#" class="btn">View Project</a>
-</div>
-</div>
-
-<div class="card">
-<img src="image/project4.jpg">
-<div class="card-content">
-<h3>Landing Page UI</h3>
-<p>Modern landing page design</p>
-<a href="#" class="btn">View Project</a>
+<h3>Login UI</h3>
+<a href="#" class="btn">View</a>
 </div>
 </div>
 
@@ -276,7 +200,7 @@ opacity: 0.6;
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 
 <form>
 <input type="text" placeholder="Name">
@@ -284,13 +208,40 @@ opacity: 0.6;
 <button class="resume-btn">Send</button>
 </form>
 
-<p>Email me at: your@email.com</p>
-
 </section>
 
 <footer>
 <p>© 2026 Mayank</p>
 </footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+// SCROLL ANIMATION
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add("show");
+}
+});
+});
+
+// BUTTON CLICK EFFECT
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn => {
+btn.addEventListener("click", () => {
+btn.innerText = "Clicked!";
+setTimeout(() => {
+btn.innerText = "Send";
+}, 1000);
+});
+});
+
+</script>
 
 </body>
 </html>
