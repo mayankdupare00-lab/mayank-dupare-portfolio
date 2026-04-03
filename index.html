@@ -6,10 +6,7 @@
 
 <style>
 
-html {
-scroll-behavior: smooth;
-}
-
+/* GOOGLE FONT STYLE FEEL */
 body {
 margin: 0;
 font-family: 'Segoe UI', sans-serif;
@@ -24,7 +21,7 @@ justify-content: space-between;
 padding: 15px 30px;
 position: sticky;
 top: 0;
-background: rgba(0,0,0,0.5);
+background: rgba(255,255,255,0.05);
 backdrop-filter: blur(10px);
 }
 
@@ -41,18 +38,8 @@ color: #00c6ff;
 
 /* SECTION */
 section {
-padding: 80px 20px;
+padding: 100px 20px;
 text-align: center;
-opacity: 0;
-transform: translateY(40px);
-animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-to {
-opacity: 1;
-transform: translateY(0);
-}
 }
 
 /* HERO */
@@ -64,58 +51,53 @@ align-items: center;
 
 /* PROFILE IMAGE */
 .profile {
-width: 130px;
-height: 130px;
+width: 140px;
+height: 140px;
 border-radius: 50%;
 object-fit: cover;
 border: 3px solid #00c6ff;
-box-shadow: 0 0 15px #00c6ff;
-margin-bottom: 15px;
+box-shadow: 0 0 25px #00c6ff;
+margin-bottom: 20px;
+}
+
+/* GRADIENT TEXT */
+h1 {
+font-size: 40px;
+background: linear-gradient(45deg, #00c6ff, #0072ff);
+-webkit-background-clip: text;
+color: transparent;
+}
+
+/* HERO TEXT */
+.hero p {
+font-size: 18px;
+opacity: 0.8;
 }
 
 /* RESUME BUTTON */
 .resume-btn {
-margin-top: 15px;
-padding: 10px 20px;
+margin-top: 20px;
+padding: 12px 25px;
 background: linear-gradient(45deg, #00c6ff, #0072ff);
 border: none;
-border-radius: 5px;
+border-radius: 30px;
 color: white;
 cursor: pointer;
 transition: 0.3s;
+font-size: 16px;
 }
 
 .resume-btn:hover {
 transform: scale(1.1);
-box-shadow: 0 0 15px #00c6ff;
+box-shadow: 0 0 20px #00c6ff;
 }
 
-/* SKILLS */
-.skills {
-display: flex;
-justify-content: center;
-gap: 15px;
-flex-wrap: wrap;
-}
-
-.skill {
-background: rgba(255,255,255,0.1);
-padding: 10px 20px;
-border-radius: 20px;
-}
-
-/* PROJECTS */
-.projects {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
-}
-
+/* GLASS CARD */
 .card {
-width: 250px;
-background: rgba(255,255,255,0.05);
-border-radius: 12px;
+width: 260px;
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(15px);
+border-radius: 15px;
 overflow: hidden;
 transition: 0.3s;
 }
@@ -132,17 +114,25 @@ padding: 15px;
 
 .card:hover {
 transform: translateY(-10px) scale(1.05);
-box-shadow: 0 0 20px rgba(0,198,255,0.6);
+box-shadow: 0 0 25px rgba(0,198,255,0.6);
 }
 
-/* PROJECT BUTTON */
+/* PROJECTS */
+.projects {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+
+/* BUTTON */
 .btn {
 display: inline-block;
 margin-top: 10px;
-padding: 8px 15px;
+padding: 10px 18px;
 background: linear-gradient(45deg, #00c6ff, #0072ff);
 color: white;
-border-radius: 5px;
+border-radius: 20px;
 text-decoration: none;
 font-size: 14px;
 transition: 0.3s;
@@ -150,23 +140,38 @@ transition: 0.3s;
 
 .btn:hover {
 transform: scale(1.1);
-box-shadow: 0 0 15px #00c6ff;
+box-shadow: 0 0 20px #00c6ff;
+}
+
+/* SKILLS */
+.skills {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.skill {
+background: rgba(255,255,255,0.1);
+padding: 10px 20px;
+border-radius: 30px;
 }
 
 /* FORM */
 form {
-padding: 20px;
-width: 300px;
+padding: 25px;
+width: 320px;
 margin: auto;
-background: rgba(255,255,255,0.05);
-border-radius: 12px;
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(15px);
+border-radius: 15px;
 }
 
 input {
 width: 100%;
-padding: 10px;
-margin: 8px 0;
-border-radius: 5px;
+padding: 12px;
+margin: 10px 0;
+border-radius: 8px;
 border: none;
 }
 
@@ -174,37 +179,7 @@ border: none;
 footer {
 text-align: center;
 padding: 20px;
-}
-
-/* SOCIAL */
-.social a {
-margin: 10px;
-color: white;
-text-decoration: none;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-nav {
-flex-direction: column;
-align-items: center;
-}
-
-.projects {
-flex-direction: column;
-align-items: center;
-}
-
-.skills {
-flex-direction: column;
-align-items: center;
-}
-
-form {
-width: 90%;
-}
-
+opacity: 0.6;
 }
 
 </style>
@@ -213,7 +188,6 @@ width: 90%;
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <div><b>Mayank</b></div>
 <div>
@@ -224,35 +198,26 @@ width: 90%;
 </div>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero">
 
-<!-- PROFILE IMAGE ADDED HERE -->
 <img src="image/profile.jpg" class="profile">
 
 <h1>Hi, I'm Mayank 👋</h1>
-<p>Aspiring UI Designer</p>
+<p>I design modern, clean and user-friendly interfaces.</p>
 
 <a href="resume/Mayank_Resume.pdf" download>
 <button class="resume-btn">Download Resume</button>
 </a>
 
+<p style="opacity:0.6;">Available for freelance projects</p>
+
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>I design modern and clean user interfaces.</p>
-
-<div class="social">
-<a href="#">LinkedIn</a>
-<a href="#">Instagram</a>
-<a href="#">GitHub</a>
-</div>
-
+<p>I create visually appealing and user-focused designs.</p>
 </section>
 
-<!-- SKILLS -->
 <section>
 <h2>My Skills</h2>
 
@@ -265,7 +230,6 @@ width: 90%;
 
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
 <h2>My Projects</h2>
 
@@ -275,35 +239,35 @@ width: 90%;
 <img src="image/project1.jpg">
 <div class="card-content">
 <h3>Portfolio Website</h3>
-<p>My personal portfolio</p>
-<a href="#" target="_blank" class="btn">View Project</a>
+<p>Personal portfolio design</p>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
 <div class="card">
 <img src="image/project2.jpg">
 <div class="card-content">
-<h3>Login UI</h3>
-<p>Modern login design</p>
-<a href="#" target="_blank" class="btn">View Project</a>
+<h3>Login UI Design</h3>
+<p>Modern login interface</p>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
 <div class="card">
 <img src="image/project3.jpg">
 <div class="card-content">
-<h3>Contact Form</h3>
-<p>Interactive form design</p>
-<a href="#" target="_blank" class="btn">View Project</a>
+<h3>Contact Form UI</h3>
+<p>Interactive form layout</p>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
 <div class="card">
 <img src="image/project4.jpg">
 <div class="card-content">
-<h3>Landing Page</h3>
-<p>Modern landing UI</p>
-<a href="#" target="_blank" class="btn">View Project</a>
+<h3>Landing Page UI</h3>
+<p>Modern landing page design</p>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
@@ -311,15 +275,16 @@ width: 90%;
 
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Me</h2>
 
 <form>
 <input type="text" placeholder="Name">
 <input type="email" placeholder="Email">
-<button>Send</button>
+<button class="resume-btn">Send</button>
 </form>
+
+<p>Email me at: your@email.com</p>
 
 </section>
 
