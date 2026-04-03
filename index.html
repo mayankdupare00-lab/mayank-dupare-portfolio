@@ -83,36 +83,49 @@ transform: translateY(0);
 }
 
 /* PROJECTS */
-.projects {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
-}
+  <section id="projects">
+<h2>My Projects</h2>
 
-.card {
-width: 260px;
-background: rgba(255,255,255,0.08);
-border-radius: 15px;
-overflow: hidden;
-transition: 0.3s;
-}
+<div class="projects">
 
-.card img {
-width: 100%;
-height: 150px;
-object-fit: cover;
-}
+<div class="card">
+<img src="image/project1.jpg">
+<div class="card-content">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio design</p>
+<a href="#" class="btn">View</a>
+</div>
+</div>
 
-.card:hover {
-transform: scale(1.05);
-box-shadow: 0 0 20px #00c6ff;
-}
+<div class="card">
+<img src="image/project2.jpg">
+<div class="card-content">
+<h3>Login UI Design</h3>
+<p>Modern login interface</p>
+<a href="#" class="btn">View</a>
+</div>
+</div>
 
-.card-content {
-padding: 15px;
-}
+<div class="card">
+<img src="image/project3.jpg">
+<div class="card-content">
+<h3>Contact Form UI</h3>
+<p>Interactive form layout</p>
+<a href="#" class="btn">View</a>
+</div>
+</div>
 
+<div class="card">
+<img src="image/project4.jpg">
+<div class="card-content">
+<h3>Landing Page UI</h3>
+<p>Modern landing page design</p>
+<a href="#" class="btn">View</a>
+</div>
+</div>
+
+</div>
+</section>
 /* FORM */
 form {
 background: rgba(255,255,255,0.08);
